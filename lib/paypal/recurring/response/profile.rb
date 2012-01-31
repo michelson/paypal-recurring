@@ -21,7 +21,10 @@ module PayPal
           :frequency           => :BILLINGFREQUENCY,
           :currency            => :CURRENCYCODE,
           :amount              => :AMT,
-          :initial_amount      => :AGGREGATEOPTIONALAMT
+          :initial_amount      => :AGGREGATEOPTIONALAMT,
+          :logo                => :HDRIMG,
+          :bg_color            => :HDRBACKCOLOR,
+          :border_color        => :HDRBORDERCOLOR,
         )
 
         OUTSTANDING = {

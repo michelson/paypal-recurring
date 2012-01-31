@@ -11,6 +11,8 @@ describe PayPal::Recurring::Response::Payment do
         :currency    => "USD",
         :payer_id    => "WTTS5KC2T46YU",
         :token       => "EC-7A593227AC789800N",
+        :logo=>"http://judicialbeep.com/assets/logo-negro-f5e1c7990957c240bcde6115dbe6b2c1.png",
+        :bg_color=>"CCCCCC"
       })
       ppr.request_payment
     }
