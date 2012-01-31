@@ -46,6 +46,9 @@ module PayPal
         :initial_amount_action => "FAILEDINITAMTACTION",
         :ipn_url               => ["PAYMENTREQUEST_0_NOTIFYURL", "NOTIFYURL"],
         :locale                => "LOCALECODE",
+        :logo                  => "HDRIMG",
+        :bg_color              => "HDRBACKCOLOR",
+        :border_color          => "HDRBORDERCOLOR",
         :method                => "METHOD",
         :no_shipping           => "NOSHIPPING",
         :outstanding           => "AUTOBILLOUTAMT",
@@ -60,7 +63,7 @@ module PayPal
         :start_at              => "PROFILESTARTDATE",
         :token                 => "TOKEN",
         :username              => "USER",
-        :version               => "VERSION",
+        :version               => "VERSION"
       }
 
       CA_FILE = File.dirname(__FILE__) + "/cacert.pem"
