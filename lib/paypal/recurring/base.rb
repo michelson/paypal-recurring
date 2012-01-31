@@ -20,6 +20,9 @@ module PayPal
       attr_accessor :return_url
       attr_accessor :start_at
       attr_accessor :token
+      attr_accessor :locale          
+      attr_accessor :logo                
+      attr_accessor :bg_color
 
       def initialize(options = {})
         options.each {|name, value| send("#{name}=", value)}
