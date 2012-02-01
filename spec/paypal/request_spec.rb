@@ -116,8 +116,12 @@ describe PayPal::Recurring::Request do
       subject.normalize_params(:locale => :us).should == {:LOCALECODE => "US"}
     end
     
-    it "normalizes bg color" do
-      subject.normalize_params(:bg_color => "#FFFFFF").should == {:HDRBACKCOLOR => "#FFFFFF"}
+    it "normalizes header bg color" do
+      subject.normalize_params(:header_bg_color => "#FFFFFF").should == {:HDRBACKCOLOR => "#FFFFFF"}
+    end
+    
+    it "normalizes header bg color" do
+      subject.normalize_params(:bg_color => "#FFFFFF").should == {:PAYFLOWCOLOR => "#FFFFFF"}
     end
     
     it "normalizes border color" do
@@ -126,6 +130,10 @@ describe PayPal::Recurring::Request do
     
     it "normalizes logo" do
       subject.normalize_params(:logo => "http://www.me.com/logo.jpg").should == { :HDRIMG => "http://www.me.com/logo.jpg" }
+    end
+    
+    it "brand name" do
+      subject.normalize_params(:brand_name => "my custom store name").should == { :BRANDNAME => "my custom store name" }
     end
     
   end
