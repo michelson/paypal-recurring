@@ -59,7 +59,12 @@ module PayPal
           :cancel_url,
           :currency,
           :description,
-          :ipn_url
+          :ipn_url,
+          :logo,                
+          :bg_color,
+          :border_color,
+          :header_bg_color ,    
+          :brand_name,
         ).merge(
           :payment_action => "Authorization",
           :no_shipping => 1,
